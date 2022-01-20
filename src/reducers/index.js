@@ -6,12 +6,20 @@ const reducer = (state = initialState, action) => {
     case 'INCREMENT':
       return {
         ...state,
-        count: state.count + 1,
+        dummy: {
+          counter: {
+            current: state.dummy.counter.current + 1,
+          }
+        }
       };
     case 'DECREMENT':
       return {
         ...state,
-        count: state.count - 1,
+        dummy: {
+          counter: {
+            current: state.dummy.counter.current - 1,
+          }
+        }
       };
     default:
       return state;

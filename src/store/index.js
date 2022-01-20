@@ -1,5 +1,9 @@
 const initialState = {
-  count: 0,
+  dummy: {
+    counter: {
+      current: 0,
+    }
+  }
 };
 
 export default initialState;

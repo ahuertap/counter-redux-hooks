@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from './actions';
+import { increment, decrement } from './actions';
 
 const App = ({ count, increment, decrement }) => {
   return (
@@ -17,8 +17,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  increment: actions.increment,
-  decrement: actions.decrement
+  increment,
+  decrement,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
